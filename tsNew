@@ -1,0 +1,9 @@
+#!/bin/bash
+cd /home/admin/AngularProjects/TS/
+mk /home/admin/AngularProjects/TS/$1/
+ln -s /home/admin/AngularProjects/TS/node_modules/ /home/admin/AngularProjects/TS/$1/
+cd /home/admin/AngularProjects/TS/$1/
+npx tsc --init
+npm init -y
+npx tsc using-ts.ts
+npx ts-node using-ts.ts
